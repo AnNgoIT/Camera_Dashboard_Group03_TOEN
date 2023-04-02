@@ -1,0 +1,52 @@
+version: "3"
+services:
+  # rabbitmq:
+  #   image: rabbitmq:3.11-management
+  #   container_name: rabbitmq
+  #   hostname: rabbitmq
+  #   volumes:
+  #     - /var/lib/rabbitmq
+  #   ports:
+  #     - "5672:5672"
+  #     - "15672:15672"
+  #   env_file:
+  #     - ./rabbitmq.env
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    hostname: mongodb
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "27018:27017"
+
+#   elasticsearch:
+#     image: docker.elastic.co/elasticsearch/elasticsearch:8.6.0
+#     container_name: elasticsearch
+#     hostname: elasticsearch
+#     environment:
+#       - node.name=elasticsearch
+#       - cluster.name=datasearch
+#       - bootstrap.memory_lock=true
+#       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+#       - cluster.initial_master_nodes=elasticsearch
+#     ulimits:
+#       memlock:
+#         soft: -1
+#         hard: -1
+#     ports:
+#       - "9200:9200"
+#     volumes:
+#       - esdata:/usr/share/elasticsearch/data
+#       - certs:/usr/share/elasticsearch/config/certs
+
+#   kibana:
+#     image: docker.elastic.co/kibana/kibana:8.6.0
+#     ports:
+#       - "5601:5601"
+# volumes:
+#   esdata:
+#     driver_opts:
+#       device: /Users/Admin/Desktop/WorkSpace/learn/nest-app/data
+#       o: bind
