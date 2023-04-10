@@ -5,35 +5,35 @@ describe('Test Camera Page', () => {
     cy.visit('http://localhost:3000/cameras');
   });
   it(`TC${testCaseID += 1} - Title Header have text "Quản lí Camera"`, () => {
-    cy.get('.Header_Title__BTZcM').contains('Quản lí Camera');
+    cy.get('[class^=Header_Title__]').contains('Quản lí Camera');
   });
   describe('Test Data Table', () => {
     it(`TC${testCaseID += 1} - Data Table should have css background-color: white`, () => {
-      cy.get('.DataTable_Container__K0vgD').should('have.css', 'background-color', 'rgb(255, 255, 255)');
+      cy.get('[class^=DataTable_Container__]').should('have.css', 'background-color', 'rgb(255, 255, 255)');
     });
     it(`TC${testCaseID += 1} - Data Table should have css border: 1px solid rgb(223,224,235)`, () => {
-      cy.get('.DataTable_Container__K0vgD').should('have.css', 'border', '1px solid rgb(223, 224, 235)');
+      cy.get('[class^=DataTable_Container__]').should('have.css', 'border', '1px solid rgb(223, 224, 235)');
     });
     it(`TC${testCaseID += 1} - Data Table should have css border-radius: 8px`, () => {
-      cy.get('.DataTable_Container__K0vgD').should('have.css', 'border-radius', '8px');
+      cy.get('[class^=DataTable_Container__]').should('have.css', 'border-radius', '8px');
     });
     describe('Test TitleContainer', () => {
       it(`TC${testCaseID += 1} - TitleContainer should have text "Camera"`, () => {
-        cy.get('.DataTable_TitleContainer__6H6UI').contains('Camera');
+        cy.get('[class^=DataTable_TitleContainer__]').contains('Camera');
       });
       it(`TC${testCaseID += 1} - TitleContainer should have logo "Sort"`, () => {
-        cy.get('.DataTable_TitleContainer__6H6UI').find('img').first().should('have.attr', 'src')
+        cy.get('[class^=DataTable_TitleContainer__]').find('img').first().should('have.attr', 'src')
           .should('include', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEISURBVHgBzZJNTsNADIWfnVIiVnCDHIFRpEIICzgR5QblBnAC4CQtQpCwgMAJ4AbMciTAZgKaFkKbwIpaGsmyxp+ff4D/NgrOuKiSPnTMTKNsy5zXsavyroLq5oJMm2+nG72vyYAmInpW3FSoIarywMR2fm21UwXzKq1EbAYDc4/ftnBZVHsM8SpwlGfpqI5dl9UBQX604Fb5cN+YDwW9NrqqDhVImvHYvdYzmnQC1mIyztF6M55l6VPwWwHO4Vuyi2GD9GDcBhC/GYE8htd3Mmz+6ZrBCdFMhYdM/gTY3UmP0WGtgKK8PVWlREUv8vxztQsBHL1YvEUg4mdMJZO/AX9gNLuX5bN3UGxrMkt9jP4AAAAASUVORK5CYII=');
       });
       it(`TC${testCaseID += 1} - TitleContainer should have text "Sort"`, () => {
-        cy.get('.DataTable_TitleContainer__6H6UI').contains('Sort');
+        cy.get('[class^=DataTable_TitleContainer__]').contains('Sort');
       });
       it(`TC${testCaseID += 1} - TitleContainer should have logo "Filter"`, () => {
-        cy.get('.DataTable_TitleContainer__6H6UI').find('img').last().should('have.attr', 'src')
+        cy.get('[class^=DataTable_TitleContainer__]').find('img').last().should('have.attr', 'src')
           .should('include', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgBzY7LDcJAEEPtqQBKoIZwACJRC5RAKakASqAIPqdIlEAH2QaiyUf5KrvJSjkkvoxl2U8DLC3W5vWJExIbz5UJD8G2sNJkxA2+0rbLbv7+xpf83Cfm1/AYPKwAD0hvbAWMQAbjQmIDlEVF1ASqkW3sBFS/mdbTuGpugKdWDEhVf5gDOJ/2T4HsCP5JSbBaZQrsJal6ps35AAAAAElFTkSuQmCC');
       });
       it(`TC${testCaseID += 1} - TitleContainer should have text "Filter"`, () => {
-        cy.get('.DataTable_TitleContainer__6H6UI').contains('Filter');
+        cy.get('[class^=DataTable_TitleContainer__]').contains('Filter');
       });
       describe('Test Title', () => {
         it(`TC${testCaseID += 1} - Title should have css font-family: Muli`, () => {
