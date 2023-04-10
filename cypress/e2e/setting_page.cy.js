@@ -5,11 +5,11 @@ describe('Setting Page Test', () => {
 
   describe('UI test', () => {
     it('Name of page is "Cài đặt"', () => {
-      cy.get('.Header_Title__2gR-C').contains('Cài đặt');
+      cy.get('[class^=Header_Title__]').contains('Cài đặt');
     });
 
     it('Content view part of Setting Page is width right', () => {
-      cy.get('.Whiteboard_Container__dyAjD').should(
+      cy.get('[class^=Whiteboard_Container__]').should(
         'have.css',
         'width',
         '1120px',
@@ -17,7 +17,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Content view part of Setting Page is height right', () => {
-      cy.get('.Whiteboard_Container__dyAjD').should(
+      cy.get('[class^=Whiteboard_Container__]').should(
         'have.css',
         'height',
         '905px',
@@ -25,7 +25,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Content view part of Setting Page is background-color right', () => {
-      cy.get('.Whiteboard_Container__dyAjD').should(
+      cy.get('[class^=Whiteboard_Container__]').should(
         'have.css',
         'background-color',
         'rgb(255, 255, 255)',
@@ -33,7 +33,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Content view part of Setting Page is border right', () => {
-      cy.get('.Whiteboard_Container__dyAjD').should(
+      cy.get('[class^=Whiteboard_Container__]').should(
         'have.css',
         'border',
         '1px solid rgb(223, 224, 235)',
@@ -41,7 +41,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Content view part of Setting Page is border-radius right', () => {
-      cy.get('.Whiteboard_Container__dyAjD').should(
+      cy.get('[class^=Whiteboard_Container__]').should(
         'have.css',
         'border-radius',
         '8px',
@@ -49,31 +49,31 @@ describe('Setting Page Test', () => {
     });
 
     it('Name of Label is "Cài đặt"', () => {
-      cy.get('.Whiteboard_Title__HzRLe').contains('Cài đặt');
+      cy.get('[class^=Whiteboard_Title__]').contains('Cài đặt');
     });
 
     it('Label is width right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should('have.css', 'width', '398px');
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'width', '398px');
     });
 
     it('Label is height right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should('have.css', 'height', '24px');
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'height', '24px');
     });
 
     it('Label is top right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should('have.css', 'top', '32px');
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'top', '32px');
     });
 
     it('Label is left right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should('have.css', 'left', '32px');
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'left', '32px');
     });
 
     it('Label is right right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should('have.css', 'right', '690px');
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'right', '690px');
     });
 
     it('Label is font-family right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should(
+      cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'font-family',
         'Mulish, sans-serif',
@@ -81,7 +81,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Label is font-size right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should(
+      cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'font-size',
         '19px',
@@ -89,7 +89,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Label is line-height right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should(
+      cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'line-height',
         '22px',
@@ -97,7 +97,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Label is letter-spacing right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should(
+      cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'letter-spacing',
         '0.4px',
@@ -105,7 +105,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Label is background-color right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should(
+      cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'background-color',
         'rgba(0, 0, 0, 0)',
@@ -113,7 +113,7 @@ describe('Setting Page Test', () => {
     });
 
     it('Label is color right', () => {
-      cy.get('.Whiteboard_Title__HzRLe').should(
+      cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'color',
         'rgb(0, 0, 0)',

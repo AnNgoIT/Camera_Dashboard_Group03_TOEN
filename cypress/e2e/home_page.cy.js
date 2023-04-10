@@ -5,11 +5,11 @@ describe('HomePage Test', () => {
 
   describe('UI test', () => {
     it('Name of page is "Trang chủ"', () => {
-      cy.get('.Header_Title__2gR-C').contains('Trang chủ');
+      cy.get('[class^=Header_Title__]').contains('Trang chủ');
     });
 
     it('Content view part of HomePage is width right', () => {
-      cy.get('.HomePage_Container__HDbQN').should(
+      cy.get('[class^=HomePage_Container__]').should(
         'have.css',
         'width',
         '1120px',
@@ -17,7 +17,7 @@ describe('HomePage Test', () => {
     });
 
     it('Content view part of HomePage is height right', () => {
-      cy.get('.HomePage_Container__HDbQN').should(
+      cy.get('[class^=HomePage_Container__]').should(
         'have.css',
         'height',
         '880px',
@@ -25,7 +25,7 @@ describe('HomePage Test', () => {
     });
 
     it('Content view part of HomePage is background-color right', () => {
-      cy.get('.HomePage_Container__HDbQN').should(
+      cy.get('[class^=HomePage_Container__]').should(
         'have.css',
         'background-color',
         'rgb(255, 255, 255)',
@@ -33,21 +33,21 @@ describe('HomePage Test', () => {
     });
 
     it('Content view part of HomePage is top right', () => {
-      cy.get('.HomePage_Container__HDbQN').should('have.css', 'top', '128px');
+      cy.get('[class^=HomePage_Container__]').should('have.css', 'top', '128px');
     });
 
     it('Content view part of HomePage is left right', () => {
-      cy.get('.HomePage_Container__HDbQN').should('have.css', 'top', '285px');
+      cy.get('[class^=HomePage_Container__]').should('have.css', 'top', '285px');
     });
 
     it('"Tổng Camera" is exist', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(1)').contains(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(1)').contains(
         'Tổng Camera',
       );
     });
 
     it('"Tổng Camera" is width right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(1)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(1)').should(
         'have.css',
         'width',
         '249px',
@@ -55,7 +55,7 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng Camera" is height right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(1)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(1)').should(
         'have.css',
         'height',
         '134px',
@@ -63,7 +63,7 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng Camera" is border right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(1)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(1)').should(
         'have.css',
         'border',
         '1px solid rgb(54, 55, 64)',
@@ -71,7 +71,7 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng Camera" is border-radius right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(1)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(1)').should(
         'have.css',
         'border-radius',
         '8px',
@@ -79,13 +79,13 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng số Profile" is exist', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(2)').contains(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(2)').contains(
         'Tổng số Profile',
       );
     });
 
     it('"Tổng số Profile" is width right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(2)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(2)').should(
         'have.css',
         'width',
         '253px',
@@ -93,7 +93,7 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng số Profile" is height right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(2)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(2)').should(
         'have.css',
         'height',
         '134px',
@@ -101,7 +101,7 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng số Profile" is border right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(2)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(2)').should(
         'have.css',
         'border',
         '1px solid rgb(54, 55, 64)',
@@ -109,7 +109,7 @@ describe('HomePage Test', () => {
     });
 
     it('"Tổng số Profile" is border-radius right', () => {
-      cy.get('.HomePage_ContainerDescription__LobTA > :nth-child(2)').should(
+      cy.get('[class^=HomePage_ContainerDescription__] > :nth-child(2)').should(
         'have.css',
         'border-radius',
         '8px',
