@@ -20,6 +20,8 @@ export class User {
     @Prop()
     @ApiProperty()
     phone: string
+
+    //comment
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
