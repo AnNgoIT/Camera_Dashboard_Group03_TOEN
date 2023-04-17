@@ -1,9 +1,9 @@
 describe('The Login Page UI', () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:3000/login')
+    cy.visit(Cypress.env('host') + '/login')
   })
   it('successfully loads', () => {
-    cy.visit('http://127.0.0.1:3000/login')
+    cy.visit(Cypress.env('host') + '/login')
   })
   it('title loads', () => {
     cy.title().should('eq', 'React App')
@@ -24,5 +24,10 @@ describe('The Login Page UI', () => {
   })
   it('contact support', () => {
     cy.get('[class^=LoginPage_Link]').contains('Contact support')
+  })
+  it('login button', () => {
+    cy.get('[name^=email]').type('admin@gmail.com')
+    cy.get('[name^=password]').type('Admin123')
+    cy.get('[class^=LoginPage_Button]').contains('Log In').click()
   })
 })
