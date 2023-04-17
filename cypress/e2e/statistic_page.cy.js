@@ -1,6 +1,10 @@
 describe('The Statistic Page', () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:3000/statistic')
+    cy.visit(Cypress.env('host') + '/login')
+    cy.get('[name^=email]').type('admin@gmail.com')
+    cy.get('[name^=password]').type('Admin123')
+    cy.get('[class^=LoginPage_Button]').contains('Log In').click()
+    cy.wait(3000).visit(Cypress.env('host') + '/statistic')
   })
   it('header', () => {
     cy.get('[class^=Header_Title]').contains('Thống kê');
