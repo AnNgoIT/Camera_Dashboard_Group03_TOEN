@@ -9,5 +9,5 @@ Cypress.Commands.add('clickLink', () => {
   return newTestCaseId;
 });
 Cypress.Commands.add('testId', () => {
-    cy.clickLink().then(value => console.log(`${testCaseID = value}`));
-  });
+  cy.clickLink().then(value => console.log(`${testCaseID = value}`));
+});
