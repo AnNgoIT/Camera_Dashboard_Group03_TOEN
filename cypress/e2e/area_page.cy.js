@@ -1,10 +1,10 @@
 describe('Area Test', () => {
   beforeEach(() => {
-    cy.visit(Cypress.env('host') + '/login');
-    cy.get('[name^=email]').type('admin@gmail.com');
-    cy.get('[name^=password]').type('Admin123');
-    cy.get('[class^=LoginPage_Button]').contains('Log In').click();
-    cy.wait(3000).visit(Cypress.env('host') + '/location');
+    cy.visit('http://localhost:3000/login');
+    cy.get('input[name="email"]').type('admin@gmail.com')
+    cy.get('input[name="password"]').type('Admin123')
+    cy.get('button[type="submit"]').click()
+    cy.wait(3000).visit('http://localhost:3000/location');
   });
 
   describe('UI test', () => {
@@ -21,7 +21,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Container__]').should(
           'have.css',
           'width',
-          '1122px'
+          '1122px',
         );
       });
 
@@ -29,7 +29,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Container__]').should(
           'have.css',
           'height',
-          '279px'
+          '279px',
         );
       });
 
@@ -37,7 +37,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Container__]').should(
           'have.css',
           'bottom',
-          '626px'
+          '626px',
         );
       });
 
@@ -45,7 +45,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Container__]').should(
           'have.css',
           'background-color',
-          'rgb(255, 255, 255)'
+          'rgb(255, 255, 255)',
         );
       });
 
@@ -53,7 +53,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Container__]').should(
           'have.css',
           'border',
-          '1px solid rgb(223, 224, 235)'
+          '1px solid rgb(223, 224, 235)',
         );
       });
 
@@ -61,24 +61,16 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Container__]').should(
           'have.css',
           'border-radius',
-          '8px'
+          '8px',
         );
       });
 
       it('Label Name of Table is width right', () => {
-        cy.get('[class^=DataTable_Title__]').should(
-          'have.css',
-          'width',
-          '400px'
-        );
+        cy.get('[class^=DataTable_Title__]').should('have.css', 'width', '400px');
       });
 
       it('Label Name of Table is height right', () => {
-        cy.get('[class^=DataTable_Title__]').should(
-          'have.css',
-          'height',
-          '24px'
-        );
+        cy.get('[class^=DataTable_Title__]').should('have.css', 'height', '24px');
       });
 
       it('Label Name of Table is left right', () => {
@@ -86,11 +78,7 @@ describe('Area Test', () => {
       });
 
       it('Label Name of Table is right right', () => {
-        cy.get('[class^=DataTable_Title__]').should(
-          'have.css',
-          'right',
-          '690px'
-        );
+        cy.get('[class^=DataTable_Title__]').should('have.css', 'right', '690px');
       });
 
       it('Label Name of Table is top right', () => {
@@ -101,7 +89,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Title__]').should(
           'have.css',
           'font-family',
-          'Muli'
+          'Muli',
         );
       });
 
@@ -109,7 +97,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Title__]').should(
           'have.css',
           'font-size',
-          '19px'
+          '19px',
         );
       });
 
@@ -117,7 +105,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Title__]').should(
           'have.css',
           'line-height',
-          '22px'
+          '22px',
         );
       });
 
@@ -125,7 +113,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Title__]').should(
           'have.css',
           'letter-spacing',
-          '0.4px'
+          '0.4px',
         );
       });
 
@@ -133,7 +121,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_Title__]').should(
           'have.css',
           'background-color',
-          'rgba(0, 0, 0, 0)'
+          'rgba(0, 0, 0, 0)',
         );
       });
 
@@ -165,7 +153,7 @@ describe('Area Test', () => {
 
       it('Checkbox is exist', () => {
         cy.get('[class^=DataTable_HeadRowContainer__]').find(
-          'input[type="checkbox"]'
+          'input[type="checkbox"]',
         );
       });
 
@@ -213,10 +201,11 @@ describe('Area Test', () => {
       });
 
       it('Divider is width right', () => {
+        // eslint-disable-next-line no-undef
         cy.get('[class^=DataTable_HeadDivider__]').should(
           'have.css',
           'width',
-          '1120px'
+          '1120px',
         );
       });
 
@@ -224,7 +213,7 @@ describe('Area Test', () => {
         cy.get('[class^=DataTable_HeadDivider__]').should(
           'have.css',
           'border',
-          '1px solid rgb(223, 224, 235)'
+          '1px solid rgb(223, 224, 235)',
         );
       });
     });
