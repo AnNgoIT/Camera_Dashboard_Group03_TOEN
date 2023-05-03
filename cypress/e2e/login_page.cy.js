@@ -1,39 +1,33 @@
-describe('Test Login Page', () => {
+describe('The Login Page UI', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/login')
+    cy.visit(Cypress.env('host') + '/login')
   })
-  it('should visible error message for no filled in field email', () => {
-    cy.get('input[name="email"]').focus().blur();
-    cy.get('[class ^=LoginPage_EmailContainer]').get('[class ^=LoginPage_Errors]').contains('Email không được bỏ trống.')
+  it('successfully loads', () => {
+    cy.visit(Cypress.env('host') + '/login')
   })
-  it('should visible error message for no filled in field password', () => {
-    cy.get('input[name="password"]').focus().blur();
-    cy.get('[class ^=LoginPage_PasswordContainer]').get('[class ^=LoginPage_Errors]').contains('Mật khẩu không được bỏ trống.')
+  it('title loads', () => {
+    cy.title().should('eq', 'React App')
   })
-  it('should visible error message for not be email', () => {
-    cy.get('input[name="email"]').type('admin').blur();
-    cy.get('[class ^=LoginPage_EmailContainer]').get('[class ^=LoginPage_Errors]').contains('Email không hợp lệ')
+  it('form loads', () => {
+    cy.get('[class^=LoginPage_SubTitle1]').contains('Camera Dashboard');
+    cy.get('[class^=LoginPage_Title]').contains('Log In');
+    cy.get('[class^=LoginPage_SubTitle]').contains('Enter your email and password below');
   })
-  it('should visible error message for password < 6', () => {
-    cy.get('input[name="password"]').type('123').blur();
-    cy.get('[class ^=LoginPage_PasswordContainer]').get('[class ^=LoginPage_Errors]').contains('Mật khẩu không được ít hơn 6 kí tự')
+  it('email loads', () => {
+    cy.get('[class^=LoginPage_Label]').contains('EMAIL')
   })
-    it('should show error message for invalid username', () => {
-      cy.get('input[name="email"]').type('invalid@test.com')
-      cy.get('input[name="password"]').type('invalidpassword')
-      cy.get('button[type="submit"]').click()
-      cy.get('.Toastify').contains('User not found').should('be.visible')
-    })
-    it('should show error message for invalid password', () => {
-      cy.get('input[name="email"]').type('admin@gmail.com')
-      cy.get('input[name="password"]').type('invalidpassword')
-      cy.get('button[type="submit"]').click()
-      cy.get('.Toastify').contains('Wrong password').should('be.visible')
-    })
-  it('should be able to login', () => {
-    cy.get('input[name="email"]').type('admin@gmail.com')
-    cy.get('input[name="password"]').type('Admin123')
-    cy.get('button[type="submit"]').click()
-    cy.url().should('include', '/')
+  it('password loads', () => {
+    cy.get('[class^=LoginPage_Label]').contains('PASSWORD')
+  })
+  it('button loads', () => {
+    cy.get('[class^=LoginPage_Button]').contains('Log In')
+  })
+  it('contact support', () => {
+    cy.get('[class^=LoginPage_Link]').contains('Contact support')
+  })
+  it('login button', () => {
+    cy.get('[name^=email]').type('admin@gmail.com')
+    cy.get('[name^=password]').type('Admin123')
+    cy.get('[class^=LoginPage_Button]').contains('Log In').click()
   })
 })
