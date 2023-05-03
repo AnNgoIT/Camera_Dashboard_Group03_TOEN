@@ -1,10 +1,6 @@
 describe('Setting Page Test', () => {
   beforeEach(() => {
-    cy.visit(Cypress.env('host') + '/login');
-    cy.get('[name^=email]').type('admin@gmail.com');
-    cy.get('[name^=password]').type('Admin123');
-    cy.get('[class^=LoginPage_Button]').contains('Log In').click();
-    cy.wait(3000).visit(Cypress.env('host') + '/setting');
+    cy.visit('http://localhost:3000/setting');
   });
 
   describe('UI test', () => {
@@ -80,7 +76,7 @@ describe('Setting Page Test', () => {
       cy.get('[class^=Whiteboard_Title__]').should(
         'have.css',
         'font-family',
-        'Muli',
+        'Mulish, sans-serif',
       );
     });
 

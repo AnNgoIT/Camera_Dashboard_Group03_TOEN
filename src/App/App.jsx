@@ -12,8 +12,6 @@ import RouteWrapper from 'components/RouteWrapper/RouteWrapper';
 
 import './index.css';
 
-//HomePage
-
 const CamerasPage = React.lazy(() => import('pages/CamerasPage/CamerasPage'));
 const ContactPage = React.lazy(() => import('pages/ContactPage/ContactPage'));
 const HomePage = React.lazy(() => import('pages/HomePage/HomePage'));

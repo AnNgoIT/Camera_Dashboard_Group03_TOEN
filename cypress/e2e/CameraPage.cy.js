@@ -2,7 +2,11 @@
 let testCaseID = 0;
 describe('Test Camera Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/cameras');
+    cy.visit(Cypress.env('host') + '/login');
+    cy.get('input[name="email"]').type('admin@gmail.com')
+    cy.get('input[name="password"]').type('Admin123')
+    cy.get('button[type="submit"]').click()
+    cy.wait(3000).visit(Cypress.env('host') + '/cameras');
   });
   it(`TC${testCaseID += 1} - Title Header have text "Quản lí Camera"`, () => {
     cy.get('[class^=Header_Title__]').contains('Quản lí Camera');
