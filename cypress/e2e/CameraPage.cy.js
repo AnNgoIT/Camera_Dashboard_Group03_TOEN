@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+//Declare id test case
 let testCaseID = 0;
 describe('Test Camera Page', () => {
   beforeEach(() => {
