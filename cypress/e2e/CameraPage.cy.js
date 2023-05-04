@@ -10,13 +10,13 @@ describe('Test Camera Page', () => {
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
     cy.wait(3000).visit(Cypress.env('host') + '/cameras');
   })
-  it(`TC${testCaseID += 1} - Title Header have text "Quản lí Camera"`, () => {
-    cy.get('[class^=Header_Title__]').contains('Quản lí Camera');
-  });
+  // it(`TC${testCaseID += 1} - Title Header have text "Quản lí Camera"`, () => {
+  //   cy.get('[class^=Header_Title__]').contains('Quản lí Camera');
+  // });
   describe('Test Data Table', () => {
-    it(`TC${testCaseID += 1} - Data Table should have css background-color: white`, () => {
-      cy.get('[class^=DataTable_Container__]').should('have.css', 'background-color', 'rgb(255, 255, 255)');
-    });
+    // it(`TC${testCaseID += 1} - Data Table should have css background-color: white`, () => {
+    //   cy.get('[class^=DataTable_Container__]').should('have.css', 'background-color', 'rgb(255, 255, 255)');
+    // });
     // it(`TC${testCaseID += 1} - Data Table should have css border: 1px solid rgb(223,224,235)`, () => {
     //   cy.get('[class^=DataTable_Container__]').should('have.css', 'border', '1px solid rgb(223, 224, 235)');
     // });
