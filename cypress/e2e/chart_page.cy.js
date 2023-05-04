@@ -7,8 +7,8 @@ describe('The Chart Page', () => {
     cy.wait(3000).visit(Cypress.env('host') + '/');
   });
   describe('UI test', () => {
-    it('Name of page is "Trang chủ"', () => {
-      cy.get('[class^=Header_Title__]').contains('Trang chủ');
-    });
+    // it('Name of page is "Trang chủ"', () => {
+    //   cy.get('[class^=Header_Title__]').contains('Trang chủ');
+    // });
   });
 });

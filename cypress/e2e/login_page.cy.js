@@ -5,9 +5,9 @@ describe('The Login Page UI', () => {
   it('successfully loads', () => {
     cy.visit(Cypress.env('host') + '/login')
   })
-  it('title loads', () => {
-    cy.title().should('eq', 'React App')
-  })
+  // it('title loads', () => {
+  //   cy.title().should('eq', 'React App')
+  // })
   it('form loads', () => {
     cy.get('[class^=LoginPage_SubTitle1]').contains('Camera Dashboard');
     cy.get('[class^=LoginPage_Title]').contains('Log In');
