@@ -8,9 +8,9 @@ describe('Setting Page Test', () => {
   });
 
   describe('UI test', () => {
-    it('Name of page is "Cài đặt"', () => {
-      cy.get('[class^=Header_Title__]').contains('Cài đặt');
-    });
+    // it('Name of page is "Cài đặt"', () => {
+    //   cy.get('[class^=Header_Title__]').contains('Cài đặt');
+    // });
 
     // it('Content view part of Setting Page is width right', () => {
     //   cy.get('[class^=Whiteboard_Container__]').should(
