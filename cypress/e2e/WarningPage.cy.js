@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 let testCaseID = 0;
-describe('Test Camera Page', () => {
+describe('Test Warning Page', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('host') + '/login');
     cy.get('[name^=email]').type('admin@gmail.com');
