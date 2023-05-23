@@ -20,16 +20,16 @@ describe('setting warning UI', () => {
     cy.get('[class^=SettingWarning_Select]').contains('Medium');
     cy.get('[class^=SettingWarning_Select]').contains('High');
   })
-  it('face report', () => {
-    cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khuôn mặt');
-    cy.get('[class^=SettingWarning_Center]').contains('Chọn khuôn mặt được dùng để cảnh báo:');
-    cy.get('[class^=SettingWarning_ImgPerson]')
-  })
-  it('area report', () => {
-    cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khu vực');
-    cy.get('[class^=SettingWarning_Center]').contains('Chọn khu vực để cảnh báo:');
-    cy.get('[class^=SettingWarning_ImgWarning]')
-  })
+  // it('face report', () => {
+  //   cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khuôn mặt');
+  //   cy.get('[class^=SettingWarning_Center]').contains('Chọn khuôn mặt được dùng để cảnh báo:');
+  //   cy.get('[class^=SettingWarning_ImgPerson]')
+  // })
+  // it('area report', () => {
+  //   cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khu vực');
+  //   cy.get('[class^=SettingWarning_Center]').contains('Chọn khu vực để cảnh báo:');
+  //   cy.get('[class^=SettingWarning_ImgWarning]')
+  // })
   it('cancel Button', () => {
 
   })

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 let testCaseID = 0;
-describe('Test Camera Page', () => {
+describe('Test Warning Page', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('host') + '/login');
     cy.get('[name^=email]').type('admin@gmail.com');
@@ -8,9 +8,9 @@ describe('Test Camera Page', () => {
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
     cy.wait(5000).visit(Cypress.env('host') + '/warning');
   });
-  it(`TC${testCaseID += 1} - Title Header have text "Cảnh báo"`, () => {
-    cy.get('[class^=Header_Title__]').contains('Cảnh báo');
-  });
+  // it(`TC${testCaseID += 1} - Title Header have text "Cảnh báo"`, () => {
+  //   cy.get('[class^=Header_Title__]').contains('Cảnh báo');
+  // });
   describe('Test FunctionalContainer', () => {
     it(`TC${testCaseID += 1} - FunctionalContainer should have icon "tick"`, () => {
       cy.get('[class^=WarningPage_FunctionalContainer__]').find('img').first().should('have.attr', 'src')

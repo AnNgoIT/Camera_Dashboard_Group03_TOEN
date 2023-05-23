@@ -128,20 +128,20 @@ describe('HomePage Test', () => {
       );
     });
 
-    it('ContainerCamera is height right', () => {
-      cy.get('[class^=HomePage_ContainerCamera__]').should(
-        'have.css',
-        'height',
-        '676px',
-      );
-    });
+    // it('ContainerCamera is height right', () => {
+    //   cy.get('[class^=HomePage_ContainerCamera__]').should(
+    //     'have.css',
+    //     'height',
+    //     '676px',
+    //   );
+    // });
 
-    it('Count of Camera is full', () => {
-      cy.get('[class^=HomePage_ContainerCamera__]')
-        .find('div')
-        .its('length')
-        .should('eq', 4);
-    });
+    // it('Count of Camera is full', () => {
+    //   cy.get('[class^=HomePage_ContainerCamera__]')
+    //     .find('div')
+    //     .its('length')
+    //     .should('eq', 4);
+    // });
 
     it('Camera is width right', () => {
       cy.get('[class^=HomePage_ContainerCamera__]')

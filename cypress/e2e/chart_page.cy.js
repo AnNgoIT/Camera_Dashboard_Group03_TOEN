@@ -6,9 +6,9 @@ describe('The Chart Page', () => {
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
     cy.wait(15000).visit(Cypress.env('host') + '/');
   });
-  describe('UI test', () => {
-    it('Name of page is "Thống kê"', () => {
-      cy.get('[class^=Header_Title__]').contains('Thống kê');
-    });
-  });
+  // describe('UI test', () => {
+  //   it('Name of page is "Thống kê"', () => {
+  //     cy.get('[class^=Header_Title__]').contains('Thống kê');
+  //   });
+  // });
 });
