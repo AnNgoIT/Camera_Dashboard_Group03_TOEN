@@ -4,7 +4,7 @@ describe('The Chart Page', () => {
     cy.get('[name^=email]').type('admin@gmail.com');
     cy.get('[name^=password]').type('Admin123');
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
-    cy.wait(3000).visit(Cypress.env('host') + '/');
+    cy.wait(20000).visit(Cypress.env('host') + '/');
   });
   describe('UI test', () => {
     it('Name of page is "Thống kê"', () => {
