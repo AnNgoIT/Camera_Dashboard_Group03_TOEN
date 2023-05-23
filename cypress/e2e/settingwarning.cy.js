@@ -4,7 +4,7 @@ describe('setting warning UI', () => {
     cy.get('[name^=email]').type('admin@gmail.com')
     cy.get('[name^=password]').type('Admin123')
     cy.get('[class^=LoginPage_Button]').contains('Log In').click()
-    cy.wait(20000).visit(Cypress.env('host') + '/settingwarning')
+    cy.wait(15000).visit(Cypress.env('host') + '/settingwarning')
   })
   it('Header', () => {
     cy.get('[class^=Header_HeaderTitleContainer]').contains('Cài đặt cảnh báo');

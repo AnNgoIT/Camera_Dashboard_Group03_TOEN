@@ -4,7 +4,7 @@ describe('Setting Page Test', () => {
     cy.get('[name^=email]').type('admin@gmail.com');
     cy.get('[name^=password]').type('Admin123');
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
-    cy.wait(20000).visit(Cypress.env('host') + '/setting');
+    cy.wait(15000).visit(Cypress.env('host') + '/setting');
   });
 
   describe('UI test', () => {
