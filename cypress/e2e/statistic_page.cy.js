@@ -10,6 +10,10 @@ describe('The Statistic Page', () => {
     cy.get('[class^=Header_Title]').contains('Thống kê');
     cy.get('[class^=StatisticPage_FunctionalContainer]').contains('Nút chuyển thống kê và đếm người');
   })
+  // it('header', () => {
+  //   cy.get('[class^=Header_Title]').contains('Thống kê');
+  //   cy.get('[class^=StatisticPage_FunctionalContainer]').contains('Nút chuyển thống kê và đếm người');
+  // })
   it('notification', () => {
     cy.get('[class^=StatisticPage_IconContainer]').contains('Đánh dấu đã đọc');
     cy.get('[class^=StatisticPage_IconContainer]').contains('Xóa thông báo');

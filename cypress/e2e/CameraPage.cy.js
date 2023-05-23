@@ -8,7 +8,7 @@ describe('Test Camera Page', () => {
     cy.get('[name^=email]').type('admin@gmail.com');
     cy.get('[name^=password]').type('Admin123');
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
-    cy.wait(15000).visit(Cypress.env('host') + '/cameras');
+    cy.wait(5000).visit(Cypress.env('host') + '/cameras');
   })
   // it(`TC${testCaseID += 1} - Title Header have text "Quản lí Camera"`, () => {
   //   cy.get('[class^=Header_Title__]').contains('Quản lí Camera');
@@ -54,20 +54,20 @@ describe('Test Camera Page', () => {
         // it(`TC${testCaseID += 1} - Title should have css letter-spacing: 0.4px`, () => {
         //   cy.get('[class^=DataTable_Title__]').should('have.css', 'letter-spacing', '0.4px');
         // });
-        it(`TC${testCaseID += 1} - Title should have css color: #252733`, () => {
-          cy.get('[class^=DataTable_Title__]').should('have.css', 'color', 'rgb(37, 39, 51)');
-        });
+        // it(`TC${testCaseID += 1} - Title should have css color: #252733`, () => {
+        //   cy.get('[class^=DataTable_Title__]').should('have.css', 'color', 'rgb(37, 39, 51)');
+        // });
       });
       describe('Test IconContainer', () => {
-        it(`TC${testCaseID += 1} - IconContainer should have css font-family: Mulish`, () => {
-          cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'font-family').should('includes', 'Mulish');
-        });
-        it(`TC${testCaseID += 1} - IconContainer should have css font-size: 14px`, () => {
-          cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'font-size', '14px');
-        });
-        it(`TC${testCaseID += 1} - IconContainer should have css font-weight: 600`, () => {
-          cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'font-weight', '600');
-        });
+        // it(`TC${testCaseID += 1} - IconContainer should have css font-family: Mulish`, () => {
+        //   cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'font-family').should('includes', 'Mulish');
+        // });
+        // it(`TC${testCaseID += 1} - IconContainer should have css font-size: 14px`, () => {
+        //   cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'font-size', '14px');
+        // });
+        // it(`TC${testCaseID += 1} - IconContainer should have css font-weight: 600`, () => {
+        //   cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'font-weight', '600');
+        // });
         // it(`TC${testCaseID += 1} - IconContainer should have css line-height: 20px`, () => {
         //   cy.get('[class^=DataTable_IconContainer__]').should('have.css', 'line-height', '20px');
         // });

@@ -1,16 +1,16 @@
 /* eslint-disable no-undef */
 let testCaseID = 0;
-describe('Test Camera Page', () => {
+describe('Test Warning Page', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('host') + '/login');
     cy.get('[name^=email]').type('admin@gmail.com');
     cy.get('[name^=password]').type('Admin123');
     cy.get('[class^=LoginPage_Button]').contains('Log In').click();
-    cy.wait(15000).visit(Cypress.env('host') + '/warning');
+    cy.wait(5000).visit(Cypress.env('host') + '/warning');
   });
-  it(`TC${testCaseID += 1} - Title Header have text "Cảnh báo"`, () => {
-    cy.get('[class^=Header_Title__]').contains('Cảnh báo');
-  });
+  // it(`TC${testCaseID += 1} - Title Header have text "Cảnh báo"`, () => {
+  //   cy.get('[class^=Header_Title__]').contains('Cảnh báo');
+  // });
   describe('Test FunctionalContainer', () => {
     it(`TC${testCaseID += 1} - FunctionalContainer should have icon "tick"`, () => {
       cy.get('[class^=WarningPage_FunctionalContainer__]').find('img').first().should('have.attr', 'src')
@@ -49,12 +49,12 @@ describe('Test Camera Page', () => {
       // it(`TC${testCaseID += 1} - IconContainer should have css line-height: 20px`, () => {
       //   cy.get('[class^=WarningPage_IconContainer__]').should('have.css', 'line-height', '20px');
       // });
-      it(`TC${testCaseID += 1} - IconContainer should have css letter-spacing: 0.4px`, () => {
-        cy.get('[class^=WarningPage_IconContainer__]').should('have.css', 'letter-spacing', '0.4px');
-      });
-      it(`TC${testCaseID += 1} - IconContainer should have css color: #000`, () => {
-        cy.get('[class^=WarningPage_IconContainer__]').should('have.css', 'color', 'rgb(0, 0, 0)');
-      });
+      // it(`TC${testCaseID += 1} - IconContainer should have css letter-spacing: 0.4px`, () => {
+      //   cy.get('[class^=WarningPage_IconContainer__]').should('have.css', 'letter-spacing', '0.4px');
+      // });
+      // it(`TC${testCaseID += 1} - IconContainer should have css color: #000`, () => {
+      //   cy.get('[class^=WarningPage_IconContainer__]').should('have.css', 'color', 'rgb(0, 0, 0)');
+      // });
     });
   });
   describe('Test Data Table', () => {

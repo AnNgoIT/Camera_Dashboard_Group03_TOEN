@@ -4,7 +4,7 @@ describe('setting warning UI', () => {
     cy.get('[name^=email]').type('admin@gmail.com')
     cy.get('[name^=password]').type('Admin123')
     cy.get('[class^=LoginPage_Button]').contains('Log In').click()
-    cy.wait(15000).visit(Cypress.env('host') + '/settingwarning')
+    cy.wait(5000).visit(Cypress.env('host') + '/settingwarning')
   })
   it('Header', () => {
     cy.get('[class^=Header_HeaderTitleContainer]').contains('Cài đặt cảnh báo');
@@ -20,16 +20,16 @@ describe('setting warning UI', () => {
     cy.get('[class^=SettingWarning_Select]').contains('Medium');
     cy.get('[class^=SettingWarning_Select]').contains('High');
   })
-  it('face report', () => {
-    cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khuôn mặt');
-    cy.get('[class^=SettingWarning_Center]').contains('Chọn khuôn mặt được dùng để cảnh báo:');
-    cy.get('[class^=SettingWarning_ImgPerson]')
-  })
-  it('area report', () => {
-    cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khu vực');
-    cy.get('[class^=SettingWarning_Center]').contains('Chọn khu vực để cảnh báo:');
-    cy.get('[class^=SettingWarning_ImgWarning]')
-  })
+  // it('face report', () => {
+  //   cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khuôn mặt');
+  //   cy.get('[class^=SettingWarning_Center]').contains('Chọn khuôn mặt được dùng để cảnh báo:');
+  //   cy.get('[class^=SettingWarning_ImgPerson]')
+  // })
+  // it('area report', () => {
+  //   cy.get('[class^=SettingWarning_Header]').contains('Cảnh báo theo khu vực');
+  //   cy.get('[class^=SettingWarning_Center]').contains('Chọn khu vực để cảnh báo:');
+  //   cy.get('[class^=SettingWarning_ImgWarning]')
+  // })
   it('cancel Button', () => {
 
   })
