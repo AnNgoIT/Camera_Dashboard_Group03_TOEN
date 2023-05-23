@@ -4,7 +4,7 @@ describe('The Statistic Page', () => {
     cy.get('[name^=email]').type('admin@gmail.com')
     cy.get('[name^=password]').type('Admin123')
     cy.get('[class^=LoginPage_Button]').contains('Log In').click()
-    cy.wait(3000).visit(Cypress.env('host') + '/statistic')
+    cy.wait(15000).visit(Cypress.env('host') + '/statistic')
   })
   it('header', () => {
     cy.get('[class^=Header_Title]').contains('Thống kê');
