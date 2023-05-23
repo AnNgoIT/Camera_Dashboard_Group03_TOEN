@@ -4,7 +4,11 @@ describe('The Statistic Page', () => {
     cy.get('[name^=email]').type('admin@gmail.com')
     cy.get('[name^=password]').type('Admin123')
     cy.get('[class^=LoginPage_Button]').contains('Log In').click()
-    cy.wait(5000).visit(Cypress.env('host') + '/statistic')
+    cy.wait(8000).visit(Cypress.env('host') + '/statistic')
+  })
+  it('header', () => {
+    cy.get('[class^=Header_Title]').contains('Thống kê');
+    cy.get('[class^=StatisticPage_FunctionalContainer]').contains('Nút chuyển thống kê và đếm người');
   })
   // it('header', () => {
   //   cy.get('[class^=Header_Title]').contains('Thống kê');
@@ -24,5 +28,20 @@ describe('The Statistic Page', () => {
     cy.get('[class^=DataTable_HeadRowContainer]').contains('Khu vực');
     cy.get('[class^=DataTable_HeadRowContainer]').contains('Serial');
     cy.get('[class^=DataTable_HeadRowContainer]').contains('Thời gian');
+  })
+  it('sort', () => {
+    cy.get('.DataTable_TitleContainerRight__RkXVu > :nth-child(1)').click()
+  })
+  it('filter', () => {
+    cy.get('.DataTable_TitleContainerRight__RkXVu > :nth-child(1)').type('DEF')
+    cy.get('.DataTable_TitleContainerRight__RkXVu > :nth-child(3)').click()
+  })
+  it('danh dau da doc', () => {
+    cy.get('.DataTable_BodyContainer__yjg2C > :nth-child(1) > :nth-child(1) > input').click()
+    cy.get('.StatisticPage_FunctionalContainerRight__qaGfQ > :nth-child(1)').click()
+  })
+  it('xoa thong bao', () => {
+    cy.get('.DataTable_BodyContainer__yjg2C > :nth-child(1) > :nth-child(1) > input').click()
+    cy.get('.StatisticPage_FunctionalContainerRight__qaGfQ > :nth-child(1)').click()
   })
 })

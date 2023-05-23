@@ -7,26 +7,26 @@ describe('Setting Page Test', () => {
     cy.wait(5000).visit(Cypress.env('host') + '/setting');
   });
 
-  describe('UI test', () => {
-    // it('Name of page is "Cài đặt"', () => {
-    //   cy.get('[class^=Header_Title__]').contains('Cài đặt');
-    // });
+  describe('SettingPage Test', () => {
+    it('Name of page is "Cài đặt"', () => {
+      cy.get('[class^=Header_Title__]').contains('Cài đặt');
+    });
 
-    // it('Content view part of Setting Page is width right', () => {
-    //   cy.get('[class^=Whiteboard_Container__]').should(
-    //     'have.css',
-    //     'width',
-    //     '1120px',
-    //   );
-    // });
+    it('Content view part of Setting Page is width right', () => {
+      cy.get('[class^=Whiteboard_Container__]').should(
+        'have.css',
+        'width',
+        '680px',
+      );
+    });
 
-    // it('Content view part of Setting Page is height right', () => {
-    //   cy.get('[class^=Whiteboard_Container__]').should(
-    //     'have.css',
-    //     'height',
-    //     '905px',
-    //   );
-    // });
+    it('Content view part of Setting Page is height right', () => {
+      cy.get('[class^=Whiteboard_Container__]').should(
+        'have.css',
+        'height',
+        '460px',
+      );
+    });
 
     it('Content view part of Setting Page is background-color right', () => {
       cy.get('[class^=Whiteboard_Container__]').should(
@@ -36,13 +36,13 @@ describe('Setting Page Test', () => {
       );
     });
 
-    // it('Content view part of Setting Page is border right', () => {
-    //   cy.get('[class^=Whiteboard_Container__]').should(
-    //     'have.css',
-    //     'border',
-    //     '1px solid rgb(223, 224, 235)',
-    //   );
-    // });
+    it('Content view part of Setting Page is border right', () => {
+      cy.get('[class^=Whiteboard_Container__]').should(
+        'have.css',
+        'border',
+        '0.8px solid rgb(223, 224, 235)',
+      );
+    });
 
     it('Content view part of Setting Page is border-radius right', () => {
       cy.get('[class^=Whiteboard_Container__]').should(
@@ -56,25 +56,23 @@ describe('Setting Page Test', () => {
       cy.get('[class^=Whiteboard_Title__]').contains('Cài đặt');
     });
 
-    // it('Label is width right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should('have.css', 'width', '398px');
-    // });
 
-    // it('Label is height right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should('have.css', 'height', '24px');
-    // });
 
-    // it('Label is top right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should('have.css', 'top', '32px');
-    // });
+    it('Label is height right', () => {
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'height', '28px');
+    });
 
-    // it('Label is left right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should('have.css', 'left', '32px');
-    // });
+    it('Label is top right', () => {
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'top', 'auto');
+    });
 
-    // it('Label is right right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should('have.css', 'right', '690px');
-    // });
+    it('Label is left right', () => {
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'left', 'auto');
+    });
+
+    it('Label is right right', () => {
+      cy.get('[class^=Whiteboard_Title__]').should('have.css', 'right', 'auto');
+    });
 
     it('Label is font-family right', () => {
       cy.get('[class^=Whiteboard_Title__]').should(
@@ -92,13 +90,13 @@ describe('Setting Page Test', () => {
       );
     });
 
-    // it('Label is line-height right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should(
-    //     'have.css',
-    //     'line-height',
-    //     '22px',
-    //   );
-    // });
+    it('Label is line-height right', () => {
+      cy.get('[class^=Whiteboard_Title__]').should(
+        'have.css',
+        'line-height',
+        'normal',
+      );
+    });
 
     it('Label is letter-spacing right', () => {
       cy.get('[class^=Whiteboard_Title__]').should(
@@ -116,12 +114,12 @@ describe('Setting Page Test', () => {
       );
     });
 
-    // it('Label is color right', () => {
-    //   cy.get('[class^=Whiteboard_Title__]').should(
-    //     'have.css',
-    //     'color',
-    //     'rgb(0, 0, 0)',
-    //   );
-    // });
+    it('Label is color right', () => {
+      cy.get('[class^=Whiteboard_Title__]').should(
+        'have.css',
+        'color',
+        'rgb(37, 39, 51)',
+      );
+    });
   });
 });
